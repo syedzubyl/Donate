@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "901586008535",
+    "project_id": "donate-76b2e",
+    "storage_bucket": "donate-76b2e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901586008535:android:c24468a5e0296844e83392",
+        "android_client_info": {
+          "package_name": "abi.parveen.donate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "901586008535-trhba13o3b75okjjrf2os07gegrqsej0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVsFpvgmQJalLqoDMpKY0QFfJxlVIO7oA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "901586008535-trhba13o3b75okjjrf2os07gegrqsej0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
