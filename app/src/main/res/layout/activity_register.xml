@@ -133,53 +133,56 @@
                 app:layout_constraintTop_toBottomOf="@+id/regbtn"
                 app:layout_constraintVertical_bias="0.0" />
 
+
             <EditText
                 android:id="@+id/regpass"
                 android:layout_width="0dp"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/loginboaredblackbg"
                 android:drawableLeft="@drawable/black_security"
-                android:drawablePadding="20dp"
+                android:drawablePadding="15dp"
                 android:ems="10"
                 android:hint="Password"
-                android:inputType="textPersonName"
-                android:paddingLeft="20dp"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:paddingStart="20dp"
                 android:paddingTop="10dp"
-                android:paddingRight="10dp"
+                android:paddingEnd="0dp"
                 android:paddingBottom="10dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
-                android:textSize="20sp"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/regemail"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/regemail"
                 app:layout_constraintTop_toBottomOf="@+id/regemail" />
 
+
             <EditText
                 android:id="@+id/regcompass"
                 android:layout_width="0dp"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:layout_marginTop="40dp"
                 android:background="@drawable/loginboaredblackbg"
                 android:drawableLeft="@drawable/black_security"
-                android:drawablePadding="20dp"
+                android:drawablePadding="15dp"
                 android:ems="10"
-                android:hint="Comfirm Password"
-                android:inputType="textPersonName"
-                android:paddingLeft="20dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:minHeight="48dp"
+                android:paddingStart="20dp"
                 android:paddingTop="10dp"
-                android:paddingRight="10dp"
+                android:paddingEnd="0dp"
                 android:paddingBottom="10dp"
                 android:textColor="@color/black"
                 android:textColorHint="@color/black"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="@+id/regpass"
-                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/regpass"
-                app:layout_constraintTop_toBottomOf="@+id/regpass"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toBottomOf="@+id/regpass" />
+
 
             <TextView
                 android:id="@+id/textView6"
