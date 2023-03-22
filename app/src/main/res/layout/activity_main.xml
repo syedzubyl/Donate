@@ -4,27 +4,43 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/loginboarderblack_btn"
     tools:context=".MainActivity">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
-        tools:layout_editor_absoluteX="-53dp"
-        tools:layout_editor_absoluteY="65dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/white">
 
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/shapeableImageView"
+                android:layout_width="0dp"
+                android:layout_height="581dp"
+                android:layout_marginBottom="1000dp"
+                android:background="@drawable/home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0" />
+
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="50dp"
                 android:fontFamily="sans-serif"
-                android:text="login"
+                android:text="LOGIN"
                 android:textColor="@color/black"
                 android:textSize="40sp"
                 android:textStyle="bold"
@@ -33,14 +49,14 @@
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.060000002" />
+                app:layout_constraintVertical_bias="0.007" />
 
             <EditText
                 android:id="@+id/inputEmail"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
-                android:layout_marginTop="36dp"
+                android:layout_marginTop="30dp"
                 android:layout_marginEnd="32dp"
                 android:background="@drawable/loginboaredblackbg"
                 android:drawableLeft="@drawable/black_email"
@@ -60,13 +76,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView" />
+                app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
             <EditText
                 android:id="@+id/inputPassword"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
+                android:layout_marginTop="40dp"
                 android:background="@drawable/loginboaredblackbg"
                 android:drawableLeft="@drawable/black_security"
                 android:drawablePadding="15dp"
@@ -90,8 +106,9 @@
                 android:id="@+id/Forgotbtn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="forgot_password"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="20dp"
+                android:text="Forgot Password"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
@@ -100,77 +117,59 @@
 
             <Button
                 android:id="@+id/Loginbtn"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
                 android:background="@drawable/loginboarderblack_btn"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
                 android:text="login"
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/Forgotbtn"
-                app:layout_constraintStart_toStartOf="@+id/inputPassword"
-                app:layout_constraintTop_toBottomOf="@+id/Forgotbtn"
+                app:layout_constraintEnd_toStartOf="@+id/ihavealreadybtn"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/shapeableImageView"
+                app:layout_constraintTop_toTopOf="@+id/ihavealreadybtn"
                 tools:ignore="DuplicateSpeakableTextCheck" />
 
-            <TextView
+            <Button
                 android:id="@+id/ihavealreadybtn"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="24dp"
-                android:text="create new account!"
-                android:textAlignment="center"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/Loginbtn"
-                app:layout_constraintStart_toStartOf="@+id/Loginbtn"
-                app:layout_constraintTop_toBottomOf="@+id/Loginbtn" />
-
-            <TextView
-                android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:text="OR"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/regbtnwhite"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:text="REGISTER"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/ihavealreadybtn"
-                app:layout_constraintStart_toStartOf="@+id/ihavealreadybtn"
-                app:layout_constraintTop_toBottomOf="@+id/ihavealreadybtn" />
+                app:layout_constraintEnd_toStartOf="@+id/shapeableImageView"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/Loginbtn"
+                app:layout_constraintTop_toBottomOf="@+id/Forgotbtn" />
 
-            <View
-                android:id="@+id/view2"
-                android:layout_width="0dp"
-                android:layout_height="2dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:background="@color/black"
-                app:layout_constraintBottom_toBottomOf="@+id/textView5"
-                app:layout_constraintEnd_toStartOf="@+id/textView5"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/Loginbtn"
-                app:layout_constraintTop_toTopOf="@+id/textView5" />
-
-            <View
-                android:id="@+id/view3"
-                android:layout_width="0dp"
-                android:layout_height="2dp"
-                android:layout_marginStart="16dp"
-                android:background="@color/black"
-                app:layout_constraintBottom_toBottomOf="@+id/textView5"
-                app:layout_constraintEnd_toEndOf="@+id/ihavealreadybtn"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toEndOf="@+id/textView5"
-                app:layout_constraintTop_toTopOf="@+id/textView5" />
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Welcome Back Donater :-)"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.195"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
 
             <Button
                 android:id="@+id/googlebtn"
                 android:layout_width="0dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="32dp"
+                android:layout_marginTop="48dp"
                 android:background="@drawable/loginboarderblack_btn"
                 android:drawableLeft="@drawable/googleg_standard_color_18"
                 android:drawablePadding="15dp"
@@ -183,13 +182,51 @@
                 android:textColor="@color/white"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="@+id/ihavealreadybtn"
+                app:layout_constraintEnd_toEndOf="@+id/view2"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintHorizontal_chainStyle="packed"
-                app:layout_constraintStart_toStartOf="@+id/ihavealreadybtn"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintStart_toStartOf="@+id/view"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/loginboarderblack_btn"
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                app:layout_constraintEnd_toStartOf="@+id/textView5"
+                app:layout_constraintStart_toStartOf="@+id/inputPassword"
+                app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/loginboarderblack_btn"
+                app:layout_constraintBottom_toBottomOf="@+id/textView5"
+                app:layout_constraintEnd_toEndOf="@+id/inputPassword"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintTop_toTopOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="184dp"
+                android:text="OR"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/ihavealreadybtn"
+                app:layout_constraintHorizontal_bias="0.593"
+                app:layout_constraintStart_toEndOf="@+id/Loginbtn"
+                app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
