@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="numbers" >
+        <item>  AB-  </item>
+        <item>  B+  </item>
+        <item>  O-  </item>
+        <item>  A-  </item>
+        <item>  AB+  </item>
+        <item>  B-  </item>
+        <item>  A+  </item>
+        <item>  O+  </item>
+    </string-array>
+
+</resources>
