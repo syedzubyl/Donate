@@ -154,14 +154,7 @@ public class MainActivity extends AppCompatActivity {
                 signIn();
             }
         });
-
-
-
-
-
-
     }
-
     void signIn() {
         Intent signInIntent =googleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent,1000);
@@ -195,10 +188,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
-
-
-
-
     private void HomeActivity() {
         finish();
         Intent intent = new Intent(getApplicationContext(), HomeActivity.class);

@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:id="@+id/home"
-    android:icon="@drawable/navigatation_home"
-    android:title="Home"/>
+    <item android:id="@+id/home"
+        android:icon="@drawable/navigatation_home"
+        android:title="Home"/>
 <item android:id="@+id/profile"
-    android:icon="@drawable/profile_blood"
+    android:icon="@drawable/new_account_circle_24"
     android:title="Profile"/>
+    <item android:id="@+id/request"
+        android:icon="@drawable/donate_search_24"
+        android:title="request"/>
+    <item android:icon="@drawable/profile_blood"
+        android:id="@+id/newaccount"
+        android:title="New"/>
 
 </menu>
