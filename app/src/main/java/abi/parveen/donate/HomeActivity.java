@@ -35,7 +35,7 @@ Button outbtn;
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         blooddonate = findViewById(R.id.requestblooddonate);
-        fooddonate = findViewById(R.id.readytoblooddonate);
+        fooddonate = findViewById(R.id.readyfooddonate);
         outbtn =findViewById(R.id.outbtn);
 
         blooddonate.setOnClickListener(new View.OnClickListener() {
