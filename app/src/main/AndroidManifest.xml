@@ -26,7 +26,7 @@
             android:name=".HomeSettingActivity"
             android:exported="false" />
         <activity
-            android:name=".oldreadytoblooddonateActivity"
+            android:name=".requestblooddonateActivity"
             android:exported="false" />
         <activity
             android:name=".newreadytodonateActivity"

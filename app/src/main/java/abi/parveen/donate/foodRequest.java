@@ -8,10 +8,10 @@ import android.widget.Spinner;
 
 public class foodRequest extends AppCompatActivity  {
      Spinner spinner;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_blood_donate);
         spinner =findViewById(R.id.spinnerquantity);
 
         ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.quantity, android.R.layout.simple_spinner_item );

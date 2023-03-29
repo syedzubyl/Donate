@@ -21,6 +21,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -38,6 +39,7 @@ public class newreadytodonateActivity extends AppCompatActivity implements Adapt
     private EditText location;
     private Button register;
 
+    private DatabaseReference databaseReference;
     ProgressDialog progressDialog;
 
     @Override
@@ -78,8 +80,8 @@ public class newreadytodonateActivity extends AppCompatActivity implements Adapt
         });
 
         // Write a message to the database
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference();
+
+        databaseReference=FirebaseDatabase.getInstance().getReference().child("user").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
 
 
         register.setOnClickListener(new View.OnClickListener() {
@@ -110,7 +112,7 @@ public class newreadytodonateActivity extends AppCompatActivity implements Adapt
                     progressDialog.setCanceledOnTouchOutside(false);
                     progressDialog.show();
                 // Check if the user already exists in the database
-                myRef.child("user").orderByChild("name").equalTo(getname).addListenerForSingleValueEvent(new ValueEventListener() {
+                databaseReference.child("user").orderByChild("name").equalTo(getname).addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         if (dataSnapshot.exists()) {
@@ -119,7 +121,7 @@ public class newreadytodonateActivity extends AppCompatActivity implements Adapt
                             Toast.makeText(newreadytodonateActivity.this, "User with this name already exists", Toast.LENGTH_SHORT).show();
                         } else {
                             // Check if the user already exists based on email, blood group, and location
-                            myRef.child("user").orderByChild("email_blood_location").equalTo(getbloodgroup + "_" + selectedvalue + "_" + getlocation).addListenerForSingleValueEvent(new ValueEventListener() {
+                            databaseReference.child("user").orderByChild("email_blood_location").equalTo(getbloodgroup + "_" + selectedvalue + "_" + getlocation).addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(DataSnapshot dataSnapshot) {
                                     if (dataSnapshot.exists()) {
@@ -127,7 +129,7 @@ public class newreadytodonateActivity extends AppCompatActivity implements Adapt
                                         Toast.makeText(newreadytodonateActivity.this, "User with this email, blood group, and location already exists", Toast.LENGTH_SHORT).show();
                                     } else {
                                         // User does not exist, add to the database
-                                        myRef.child("user").child(getname).setValue(hashMap)
+                                        databaseReference.child("user").child(getname).setValue(hashMap)
                                                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                                                     @Override
                                                     public void onSuccess(Void unused) {

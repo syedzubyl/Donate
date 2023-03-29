@@ -4,6 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".oldreadytoblooddonateActivity">
+    tools:context=".requestblooddonateActivity">
+
+    <view class="androidx.appcompat.app.AlertController$RecycleListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </view>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -45,7 +45,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/readytoblooddonate"
+        android:id="@+id/readyfooddonate"
         android:layout_width="280dp"
         android:layout_height="120dp"
         android:layout_marginTop="40dp"
@@ -73,10 +73,10 @@
         android:textAlignment="viewStart"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/readytoblooddonate"
+        app:layout_constraintEnd_toEndOf="@+id/readyfooddonate"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/readytoblooddonate"
-        app:layout_constraintTop_toBottomOf="@+id/readytoblooddonate" />
+        app:layout_constraintStart_toStartOf="@+id/readyfooddonate"
+        app:layout_constraintTop_toBottomOf="@+id/readyfooddonate" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/newNavigationView"
