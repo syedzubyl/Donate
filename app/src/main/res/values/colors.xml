@@ -10,8 +10,8 @@
     //home and splash login and register page design
     <color name="red">#EE1C3A</color>
 
-
-
+    <color name="skincolor">#FFFD7EB0</color>
+    <color name="error_color">#FF0000</color>
 
 
 </resources>

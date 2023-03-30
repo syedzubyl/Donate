@@ -2,6 +2,7 @@ package abi.parveen.donate;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -102,8 +103,10 @@ public class newreadytodonateActivity extends AppCompatActivity implements Adapt
                 }
                 else if(getlocation.isEmpty()){
                     location.setError("Please Enter the location");
-                }
-                else if(getbloodgroup.isEmpty()){
+                } else if (selectedvalue =="-Select Blood Group-") {
+
+                    Toast.makeText(newreadytodonateActivity.this,"plzz selected any blood group",Toast.LENGTH_SHORT).show();
+                } else if(getbloodgroup.isEmpty()){
                     email.setError("Please Enter the Email");
                 }
                 else{
@@ -179,4 +182,5 @@ public class newreadytodonateActivity extends AppCompatActivity implements Adapt
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+
 }
