@@ -18,7 +18,7 @@ Button newblooddonate;
             newblooddonate.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent =new Intent(BloodDonateActivity.this, newreadytodonateActivity.class);
+                    Intent intent =new Intent(BloodDonateActivity.this, uploadblooddetailsActivity.class);
                     startActivity(intent);
                 }
             });

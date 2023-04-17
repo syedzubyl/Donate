@@ -48,7 +48,7 @@
                     android:src="@drawable/add_photo_alternate_24" />
 
                 <EditText
-                    android:id="@+id/readyname"
+                    android:id="@+id/uploadname"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginTop="15dp"
@@ -58,7 +58,7 @@
                     android:textAlignment="center" />
 
                 <Spinner
-                    android:id="@+id/spinner"
+                    android:id="@+id/uploadspinner"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginTop="15dp"
@@ -73,7 +73,7 @@
                     app:layout_constraintVertical_bias="0.578" />
 
                 <EditText
-                    android:id="@+id/reaadylocation"
+                    android:id="@+id/uploadlocation"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginTop="15dp"
@@ -83,7 +83,7 @@
                     android:textAlignment="center" />
 
                 <EditText
-                    android:id="@+id/readyemail"
+                    android:id="@+id/uploadgmail"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     android:layout_marginTop="15dp"
@@ -108,13 +108,13 @@
                         android:text="EDIT"
                         android:textColor="@color/white"
                         app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toStartOf="@+id/readyregister"
+                        app:layout_constraintEnd_toStartOf="@+id/uploadready"
                         app:layout_constraintHorizontal_bias="0.5"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <Button
-                        android:id="@+id/readyregister"
+                        android:id="@+id/uploadready"
                         android:layout_width="wrap_content"
                         android:layout_height="48dp"
                         android:layout_marginStart="10dp"

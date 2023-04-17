@@ -41,7 +41,7 @@ Button outbtn;
         blooddonate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, newreadytodonateActivity.class);
+                Intent intent = new Intent(HomeActivity.this,requestblooddonateActivity.class);
                 startActivity(intent);
             }
         });
@@ -66,7 +66,7 @@ Button outbtn;
                     case R.id.home:
                         return true;
                     case R.id.newaccount:
-                        startActivity(new Intent(getApplicationContext(),newreadytodonateActivity.class));
+                        startActivity(new Intent(getApplicationContext(), uploadblooddetailsActivity.class));
                         overridePendingTransition(0,0);
                         return true;
 

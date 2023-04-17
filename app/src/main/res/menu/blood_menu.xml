@@ -3,14 +3,12 @@
     <item android:id="@+id/home"
         android:icon="@drawable/navigatation_home"
         android:title="Home"/>
-<item android:id="@+id/profile"
-    android:icon="@drawable/new_account_circle_24"
-    android:title="Profile"/>
+
     <item android:id="@+id/request"
         android:icon="@drawable/donate_search_24"
         android:title="request"/>
-    <item android:icon="@drawable/profile_blood"
-        android:id="@+id/newaccount"
-        android:title="New"/>
 
+    <item android:id="@+id/newaccount"
+        android:icon="@drawable/new_account_circle_24"
+        android:title="Profile"/>
 </menu>

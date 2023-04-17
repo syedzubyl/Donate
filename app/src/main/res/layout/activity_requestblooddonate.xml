@@ -5,6 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".requestblooddonateActivity">
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        android:scrollbars="vertical"
+        android:layout_marginTop="20dp"
+        />
 
 <com.google.android.material.floatingactionbutton.FloatingActionButton
     android:layout_width="wrap_content"
@@ -12,9 +19,28 @@
     android:id="@+id/fab"
     android:layout_alignParentRight="true"
     android:layout_alignParentBottom="true"
-    android:layout_margin="40dp"
+    android:layout_marginBottom="80dp"
+    android:layout_marginEnd="20dp"
     android:backgroundTint="#FFFD7EB0"
     android:src="@drawable/progress_add_24"
     app:tint="@color/white"
     />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/newNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="676dp"
+        android:layout_marginBottom="-1dp"
+        android:background="@color/skincolor"
+        android:touchscreenBlocksFocus="true"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:menu="@menu/blood_menu" />
 </RelativeLayout>
