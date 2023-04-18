@@ -3,6 +3,7 @@ package abi.parveen.donate;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -32,6 +33,8 @@ public class requestblooddonateActivity extends AppCompatActivity {
     List<DataClass> dataClassList;
     DatabaseReference databaseReference;
     ValueEventListener eventListener;
+    SearchView searchView;
+    MyAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,9 @@ public class requestblooddonateActivity extends AppCompatActivity {
         setContentView(R.layout.activity_requestblooddonate);
        fab=findViewById(R.id.fab);
         recyclerView=findViewById(R.id.recyclerView);
+        searchView =findViewById(R.id.search);
+        searchView.clearFocus();
+
 
         GridLayoutManager gridLayoutManager =new GridLayoutManager(requestblooddonateActivity.this,1);
         recyclerView.setLayoutManager(gridLayoutManager);
@@ -50,7 +56,7 @@ public class requestblooddonateActivity extends AppCompatActivity {
 
         dataClassList =new ArrayList<>();
 
-        MyAdapter adapter= new MyAdapter(requestblooddonateActivity.this,dataClassList);
+         adapter= new MyAdapter(requestblooddonateActivity.this,dataClassList);
         recyclerView.setAdapter(adapter);
         databaseReference=FirebaseDatabase.getInstance().getReference("Android Data");
         dialog.show();
@@ -70,6 +76,19 @@ public class requestblooddonateActivity extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 dialog.dismiss();
+            }
+        });
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+               searchList(newText);
+                return true;
             }
         });
         fab.setOnClickListener(new View.OnClickListener() {
@@ -111,5 +130,15 @@ public class requestblooddonateActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void searchList(String text){
+        ArrayList<DataClass> searchList=new ArrayList<>();
+        for(DataClass dataClass : dataClassList){
+            if(dataClass.getCdataSpinner().toLowerCase().contains(text.toLowerCase())){
+                searchList.add(dataClass);
+            }
+        }
+        adapter.searchDataList(searchList);
     }
 }
