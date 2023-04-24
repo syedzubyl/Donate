@@ -183,8 +183,9 @@ storageReference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadT
       FirebaseDatabase.getInstance().getReference("Android Data").child(name).setValue(dataClass).addOnCompleteListener(new OnCompleteListener<Void>() {
           @Override
           public void onComplete(@NonNull Task<Void> task) {
+
               if(task.isSuccessful()){
-                  Toast.makeText(uploadblooddetailsActivity.this, "Saved", Toast.LENGTH_SHORT).show();
+                  Toast.makeText(uploadblooddetailsActivity.this, "Congratulations, successfully registered", Toast.LENGTH_SHORT).show();
                   finish();
               }
           }
@@ -194,6 +195,29 @@ storageReference.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadT
               Toast.makeText(uploadblooddetailsActivity.this, e.getMessage().toString(), Toast.LENGTH_SHORT).show();
           }
       });
+
+        String userEmail = uploadgmail.getText().toString();
+        FirebaseDatabase.getInstance().getReference("Android Data")
+                .orderByChild("gmail")
+                .equalTo(userEmail)
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        if (snapshot.exists()) {
+                            // user email already exists in database
+                            Toast.makeText(uploadblooddetailsActivity.this, "Email already exists", Toast.LENGTH_SHORT).show();
+                        } else {
+                            // user email does not exist in database
+                            DataClass dataClass = new DataClass(name, location, bloodgroup, userEmail, imageURL);
+                            // upload data to Firebase database
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Toast.makeText(uploadblooddetailsActivity.this, error.getMessage().toString(), Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
 
 

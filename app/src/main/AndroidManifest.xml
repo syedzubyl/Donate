@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
         android:name="com.google.android.gms.permission.AD_ID"
@@ -16,6 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Donate"
         tools:targetApi="31">
+        <activity
+            android:name=".FoodregisterActivity"
+            android:exported="false" />
         <activity
             android:name=".foodRequest"
             android:exported="false" />
@@ -36,9 +40,6 @@
             android:exported="false" />
         <activity
             android:name=".FoodDonateActivity"
-            android:exported="false" />
-        <activity
-            android:name=".BloodDonateActivity"
             android:exported="false" />
         <activity
             android:name=".HomeActivity"

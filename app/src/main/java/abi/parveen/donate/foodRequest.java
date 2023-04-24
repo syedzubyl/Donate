@@ -11,12 +11,10 @@ public class foodRequest extends AppCompatActivity  {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_blood_donate);
-        spinner =findViewById(R.id.spinnerquantity);
+        setContentView(R.layout.activity_food_donar);
 
-        ArrayAdapter<CharSequence> adapter=ArrayAdapter.createFromResource(this,R.array.quantity, android.R.layout.simple_spinner_item );
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-        spinner.setAdapter(adapter);
+
+
 
     }
 }

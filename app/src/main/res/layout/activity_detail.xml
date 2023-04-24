@@ -62,5 +62,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="60dp"
+    android:layout_gravity="center"
+    android:background="@color/skincolor"
+    android:text="send Request"
+    android:paddingStart="30dp"
+    android:paddingEnd="30dp"
+    android:textColor="@color/white"
+    android:textSize="20dp"
+    android:id="@+id/sendRequest"
 
+    />
 </LinearLayout>

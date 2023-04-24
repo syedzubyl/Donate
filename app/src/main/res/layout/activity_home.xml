@@ -77,6 +77,22 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/readyfooddonate"
         app:layout_constraintTop_toBottomOf="@+id/readyfooddonate" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/foodNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="676dp"
+        android:layout_marginBottom="1dp"
+        android:background="@color/teal_200"
+        android:touchscreenBlocksFocus="true"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/food_menu" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/newNavigationView"

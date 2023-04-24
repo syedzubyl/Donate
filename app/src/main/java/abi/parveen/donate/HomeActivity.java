@@ -48,16 +48,33 @@ Button outbtn;
         fooddonate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, foodRequest.class);
+                Intent intent = new Intent(HomeActivity.this, FoodregisterActivity.class);
                 startActivity(intent);
             }
         });
         BottomNavigationView bottomNavigationView =findViewById(R.id.bottomNavigationView);
         BottomNavigationView newbottmNavigationView =findViewById(R.id.newNavigationView);
+        BottomNavigationView food =findViewById(R.id.foodNavigationView);
+        food.setSelectedItemId(R.id.home);
 
         bottomNavigationView.setSelectedItemId(R.id.home);
         newbottmNavigationView.setSelectedItemId(R.id.home);
 
+        food.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()) {
+                    case R.id.home:
+                        return true;
+
+                    case R.id.register:
+                        startActivity(new Intent(getApplicationContext(), FoodregisterActivity.class));
+                        overridePendingTransition(0, 0);
+                        return true;
+                }
+                return false;
+            }
+        });
         newbottmNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -92,6 +109,8 @@ Button outbtn;
                 return false;
             }
         });
+
+
         googleSignInOptions = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
                 .build();

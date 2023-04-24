@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="quantity">
+        <item> -select only one-</item>
         <item> 10 Persons </item>
         <item> 20 Persons </item>
         <item> 30 Persons </item>
