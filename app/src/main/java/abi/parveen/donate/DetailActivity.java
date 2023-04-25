@@ -2,6 +2,7 @@ package abi.parveen.donate;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Message;
 import android.view.View;
@@ -36,6 +37,13 @@ Button sendRequest;
 
         sendRequest=findViewById(R.id.sendRequest);
 
+        sendRequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(DetailActivity.this,FoodDonateActivity.class);
+                startActivity(intent);
+            }
+        });
         Bundle bundle =getIntent().getExtras();
         if (bundle!= null){
             Glide.with(this).load(bundle.getString("image")).into(detailImage);

@@ -18,6 +18,9 @@
         android:theme="@style/Theme.Donate"
         tools:targetApi="31">
         <activity
+            android:name=".MailAPiActivity"
+            android:exported="false" />
+        <activity
             android:name=".FoodregisterActivity"
             android:exported="false" />
         <activity
