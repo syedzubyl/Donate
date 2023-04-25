@@ -31,6 +31,13 @@ Button registerdonner;
                 startActivity(intent);
             }
         });
+        registerdonner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent =new Intent(FoodregisterActivity.this,FoodDonateActivity.class);
+                startActivity(intent);
+            }
+        });
         BottomNavigationView foodregister =findViewById(R.id.foodNavigationView);
         foodregister.setSelectedItemId(R.id.register);
 

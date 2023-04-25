@@ -48,7 +48,7 @@ Button outbtn;
         fooddonate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, FoodregisterActivity.class);
+                Intent intent = new Intent(HomeActivity.this, FoodRequestActivity.class);
                 startActivity(intent);
             }
         });
