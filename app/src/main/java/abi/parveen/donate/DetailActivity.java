@@ -40,7 +40,7 @@ Button sendRequest;
         sendRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent =new Intent(DetailActivity.this,FoodDonateActivity.class);
+                Intent intent =new Intent(DetailActivity.this,MailAPiActivity.class);
                 startActivity(intent);
             }
         });
@@ -53,11 +53,6 @@ Button sendRequest;
             detailBlood.setText(bundle.getString("blood group"));
         }
 
-    sendRequest.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
 
-        }
-    });
     }
 }
